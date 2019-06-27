@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+=======================================================================================
+ Brooklyn HTML Template by United Themes (http://www.unitedthemes.com)
+ Marcel Moerkens & Matthias Nettekoven 
+=======================================================================================
+-->
+
+<head>
+
+	<!-- Basic Page Needs
+  ================================================== -->
+	<meta charset="utf-8">
+	<title>2CLD</title>
+	<meta name="author" content="Rico Herlt">
+    <meta name="description" content="2CLD ist ein Softwarediensteister aus Berlin. Das Angebot reicht von der Entwicklung von Xamarin Apps (iOS, Android, UWP) über Cloud Backend-Entwicklung mit ASP.NET Core bis hin zu Consulting und individuellen Workshops.">
+    <meta name="keywords" content="rico herlt rherlt C# csharp asp.net dotnet azure xamarin berlin software architect consulting consultant">
+   
+
+	<!-- Mobile Specific Metas
+  ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+	<!-- CSS
+  ================================================== -->
+  	<link rel="stylesheet" href="css/reset.css" media="all">
+    <link rel="stylesheet" href="css/ut-fontface.css" media="all">
+    <link rel="stylesheet" href="css/font-awesome.css" media="all">
+	<link rel="stylesheet" href="css/flexslider.css" media="all">
+    <link rel="stylesheet" href="css/magnific-popup.css" media="all">
+    <link rel="stylesheet" href="css/ut-responsive-grid.css" media="all">
+    <link rel="stylesheet" href="css/color.css" media="all">
+    <link rel="stylesheet" href="css/style.css" media="all">
+    
+    <!--[if lt IE 9]>
+		<script src="js/html5.js"></script>
+	<![endif]-->
+    
+   <!--[if lt IE 9]>
+	<link rel="stylesheet" type="text/css" href="ie8-and-down.css" />
+	<style>.hero .hero-holder {
+		margin-left:-410px;
+	}
+	</style>
+    <![endif]-->
+    
+    <!--[if IE]>
+		<link rel="stylesheet" type="text/css" href="css/ie.css" />
+	<![endif]-->
+
+	<!-- Favicons
+	================================================== -->
+	<link rel="shortcut icon" href="images/favicon.ico">    
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+    <link rel="manifest" href="/images/site.webmanifest">
+    <link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/images/favicon.ico">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-config" content="/images/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+	<!-- Load jQuery
+  	================================================== -->
+  	<script src="js/jquery.min.js"></script>
+    
+	<script src="js/modernizr.js"></script>
+    <script src="js/device.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="/css/cookieconsent_3.1.0.min.css">
+    <script src="/js/cookieconsent_3.1.0.min.js"></script>
+    <script type="application/javascript">
+        const GOOGLE_UA = "UA-128043679-1"
+
+        function enableCookies() {
+            var s = document.createElement('script')
+            s.async = true
+            s.src = "https://www.googletagmanager.com/gtag/js?id=" + GOOGLE_UA
+            s.id = 'google-analytics-script-tag'
+            document.head.appendChild(s)
+
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+            gtag('config', GOOGLE_UA, { 'anonymize_ip': true });
+        }
+
+        function deleteAllCookies() {
+            var cookies = document.cookie.split(";");
+
+            for (var i = 0; i < cookies.length; i++) {
+                var cookie = cookies[i];
+                var eqPos = cookie.indexOf("=");
+                var name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
+                document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT";
+            }
+        }
+
+        function disableCookies() {
+            var ga = document.getElementById('google-analytics-script-tag')
+            if (ga) { ga.remove() }
+            window.dataLayer = []
+
+            deleteAllCookies()
+        }
+
+        window.addEventListener("load", function () {
+            window.cookieconsent.initialise({
+                "palette": {
+                    "popup": {
+                        "background": "#1577b5",
+                        "text": "#ffffff"
+                    },
+                    "button": {
+                        "background": "#ffffff",
+                        "text": "#1577b5"
+                    }
+                },
+                "theme": "classic",
+                "type": "opt-in",
+                "content": {
+                    "message": "Diese Website nutzt Cookies um Ihnen eine bestmögliche Nutzererfahrung bereit zu stellen.",
+                    "deny": "Ablehnen",
+                    "allow": "Zustimmen",
+                    "link": "Mehr erfahren"
+                },
+                onInitialise: function (status) {
+                    if (status === 'allow') { enableCookies() }
+                },
+
+                onStatusChange: function (status, chosenBefore) {
+                    if (status === 'allow') { enableCookies() }
+                },
+
+                onRevokeChoice: function () { disableCookies() },
+            })
+        });
+    </script>
+</head>
+
+<body id="mainsite">
+	
+    <a id="top"></a>
+    
+	<!-- Page Layout
+	================================================== -->
+    
+     <!-- header section -->
+	<header id="header-section" class="ha-header ha-header-hide">
+    	<div class="grid-container">
+				<div class="ha-header-perspective">
+					<div class="ha-header-front">
+                    <div class="grid-20 tablet-grid-20 hide-on-mobile">
+						<h1 class="logo"><a href="#top"><img src="images/2cld_logo.png" alt="logo"></a></h1>
+                        </div>
+						<nav id="ut-navigation" class="grid-80 tablet-grid-80 hide-on-mobile">
+                        	<a class="selected" href="#top">Start</a>
+							<a href="#about-section">Leistungen</a>
+                            <a href="#portfolio-section">Projekte</a>
+                            <a href="#contact-section">Kontakt</a>
+                            <a href="privacy.html">Datenschutz</a>
+						</nav>
+					</div>
+				</div><!-- close .ha-header-perspective --> 
+        </div><!-- close grid container -->  
+    </header><!-- close header -->
+    
+    <div class="clear"></div>
+    
+	<!-- hero section -->
+    <section id="top" class="hero ha-waypoint parallax-section parallax-banner-1 parallax-background" data-animate-up="ha-header-hide" data-animate-down="ha-header-hide">
+        <div class="parallax-overlay parallax-overlay-1"></div> 
+    	<div class="grid-container">
+    		
+            <!-- hero holder -->
+            <div class="hero-holder grid-70 mobile-grid-100 tablet-grid-100">
+            	<div class="hero-inner">
+                    <span class="hero-description">There's no cloud. It's just someone else's computer.</span>
+                    <div class="hero-title-holder"><h1 class="hero-title">Wir sind <span>2cld</span></h1></div>
+                    <span class="btn-holder"><a id="to-about-section" class="hero-btn" href="#about-section">Unser Angebot</a></span>
+                </div>
+            </div><!-- close hero-holder -->    													
+    	</div>
+    </section><!-- close hero section -->
+    
+    <div class="clear"></div>
+   
+    <div id="main-content" class="wrap">
+    
+    <!-- about section -->
+    <div class="nav-waypoint">
+	<section id="about-section" class="about-section content-section ha-waypoint" data-animate-up="ha-header-hide" data-animate-down="ha-header-small">
+		<div class="grid-container">
+        	
+            <!-- section header -->
+            <div class="grid-70 prefix-15 mobile-grid-100 tablet-grid-100">
+                <header class="section-header">
+                    <h2 class="section-title"><span>Leistungen</span></h2>
+                    <p class="section-slogan">Wir bieten Ihnen individuelle Leistungen im Bereich <strong>Softwareentwicklung</strong> und <strong>Consulting</strong>.</p>
+                </header>
+            </div>
+            <!-- close section header -->
+            
+            <div class="grid-33 tablet-grid-100 mobile-grid-100 about-box">
+            	<figure class="about-icon"><img src="images/icon_phone.png" alt="app-development"></figure>
+                
+                <div class="about-box">
+                    <h3>Native Cross-Platform-Entwicklung mit Xamarin (iOS, Android, UWP)</h3>
+                    <p></p>
+                </div>
+            </div>
+            
+            <div class="grid-33 tablet-grid-100 mobile-grid-100 about-box">
+            	<figure class="about-icon"><img src="images/icon_backend.png" alt="ui-design"></figure>
+                
+                <div class="about-box">
+                    <h3>Backend-Entwicklung mit ASP.NET Core</h3>
+                    <p></p>
+                </div>
+            </div>
+            
+            <div class="grid-33 tablet-grid-100 mobile-grid-100 about-box">
+            	<figure class="about-icon"><img src="images/icon_consulting.png" alt="brand-identity"></figure>
+                
+                <div class="about-box">
+                    <h3>Software Consulting und individuelle Workshops</h3>
+                    <p></p>
+                </div>
+            </div>
+            
+            
+            
+    	</div><!-- close grid-container -->
+    </section><!-- close about section -->
+            
+    <div class="clear"></div>
+    
+    <!-- parallax banner 2-->
+     <section id="parallax-section-2" class="parallax-section parallax-banner-2 parallax-background parallax-section-2 ha-waypoint">
+     <div class="parallax-overlay parallax-overlay-2"></div>
+		<div class="grid-container parallax-content">
+            
+            	<!-- parallax header -->
+            	<div class="grid-70 prefix-15 mobile-grid-100 tablet-grid-100">
+                    <header class="parallax-header">
+                        <h2 class="parallax-title"><span>Sprechen Sie uns an</span></h2>
+                        <p class="parallax-slogan">Kontaktieren Sie uns unverbindlich per E-Mail an <a href="mailto:info@2cld.de">info@2cld.de</a>!</p>
+                    </header>
+                </div>
+            	<!-- close parallax header -->
+   
+		</div><!-- close grid container -->
+	</section><!-- close parallax banner 2-->
+    
+    </div><!-- close nav-waypoint -->
+    
+    <div class="clear"></div>
+    
+    <!-- portfolio section -->
+    <div class="nav-waypoint">
+	<section id="portfolio-section" class="portfolio-section content-section">
+		<div class="grid-container">
+        	
+            <!-- section header -->
+            <div class="grid-70 prefix-15 mobile-grid-100 tablet-grid-100">
+                <header class="section-header">
+                    <h2 class="section-title"><span>Projekte</span></h2>
+                    <p class="section-slogan">Eine Auswahl unserer <strong>letzten Projekte</strong> finden Sie hier.</p>
+                </header>
+            </div>
+            <!-- close section header -->
+            
+<!--            <div class="clear"></div>
+            
+            <!-- portfolio box 1 -->
+<!--			<div class="grid-25 mobile-grid-50 tablet-grid-50">
+            	<a class="" href="project_steamnet.html">
+            	<div class="portfolio-box">       
+            	<figure class="portfolio-image"><img src="images/apps/apps_thumbnails/SteamNET.Inspector_thumb.jpg" alt="portfolio image"></figure><!-- close portfolio image -->
+<!--                <div class="portfolio-caption">
+                    <h3 class="portfolio-title">SteamNET.Inspector<span class="portfolio-category">App</span></h3>
+                </div><!-- close portfolio caption -->               
+<!--                </div>
+                </a>              
+			</div><!-- close portfolio -->
+            
+            <!-- portfolio box 2 -->
+<!--			<div class="grid-25 mobile-grid-50 tablet-grid-50">
+            	<a class="" href="project_DAK.html">
+            	<div class="portfolio-box">       
+            	<figure class="portfolio-image"><img src="images/apps/apps_thumbnails/DAK_thumb.jpg" alt="portfolio image"></figure><!-- close portfolio image -->
+<!--                <div class="portfolio-caption">
+                    <h3 class="portfolio-title">DAK Service App<span class="portfolio-category">App</span></h3>
+                </div><!-- close portfolio caption -->               
+<!--                </div>
+                </a>              
+			</div><!-- close portfolio -->
+            
+            <!-- portfolio box 3 -->
+<!--			<div class="grid-25 mobile-grid-50 tablet-grid-50">
+            	<a class="" href="project_keasy.html">
+            	<div class="portfolio-box">       
+            	<figure class="portfolio-image"><img src="images/apps/apps_thumbnails/Keasy_thumb.jpg" alt="portfolio image"></figure><!-- close portfolio image -->
+<!--                <div class="portfolio-caption">
+                    <h3 class="portfolio-title">Keasy.Cloud<span class="portfolio-category">App</span></h3>
+                </div><!-- close portfolio caption -->               
+<!--                </div>
+                </a>              
+			</div><!-- close portfolio -->
+            
+            <!-- portfolio box 4 -->
+<!--			<div class="grid-25 mobile-grid-50 tablet-grid-50">
+            	<a class="" href="project_draeger_service_connect.html">
+            	<div class="portfolio-box">       
+            	<figure class="portfolio-image"><img src="images/apps/apps_thumbnails/Draeger-ServiceConnect-Devices_thumb.jpg" alt="portfolio image"></figure><!-- close portfolio image -->
+<!--                <div class="portfolio-caption">
+                    <h3 class="portfolio-title">Dräger ServiceConnect<span class="portfolio-category">App</span></h3>
+                </div><!-- close portfolio caption -->               
+<!--               </div>
+                </a>              
+			</div><!-- close portfolio -->
+            
+            <!-- portfolio box 5 -->
+<!--			<div class="grid-25 mobile-grid-50 tablet-grid-50">
+            	<a class="" href="project_draeger_tubes.html">
+            	<div class="portfolio-box">       
+            	<figure class="portfolio-image"><img src="images/apps/apps_thumbnails/Draeger-Tubes_thumb.jpg" alt="portfolio image"></figure><!-- close portfolio image -->
+<!--                <div class="portfolio-caption">
+                    <h3 class="portfolio-title">Dräger Tubes App<span class="portfolio-category">App</span></h3>
+                </div><!-- close portfolio caption -->               
+<!--               </div>
+                </a>              
+			</div><!-- close portfolio -->
+            
+            <!-- portfolio box 6 -->
+<!--			<div class="grid-25 mobile-grid-50 tablet-grid-50">
+            	<a class="" href="project_handtmann.html">
+            	<div class="portfolio-box">       
+            	<figure class="portfolio-image"><img src="images/apps/apps_thumbnails/Handtmann_thumb.jpg" alt="portfolio image"></figure><!-- close portfolio image -->
+ <!--               <div class="portfolio-caption">
+                    <h3 class="portfolio-title">HANDTMANN SALES APP<span class="portfolio-category">App</span></h3>
+                </div><!-- close portfolio caption -->               
+<!--                </div>
+                </a>              
+			</div><!-- close portfolio -->
+     
+            <!-- portfolio box 7 -->
+<!--			<div class="grid-25 mobile-grid-50 tablet-grid-50">
+            	<a class="" href="project_busy_petrus.html">
+            	<div class="portfolio-box">       
+            	<figure class="portfolio-image"><img src="images/apps/apps_thumbnails/Busy-Petrus_thumb.jpg" alt="portfolio image"></figure><!-- close portfolio image -->
+<!--                <div class="portfolio-caption">
+                    <h3 class="portfolio-title">Busy Petrus<span class="portfolio-category">App</span></h3>
+                </div><!-- close portfolio caption -->               
+ <!--               </div>
+                </a>              
+			</div><!-- close portfolio -->
+            
+            <!-- portfolio box 8 -->
+<!--			<div class="grid-25 mobile-grid-50 tablet-grid-50">
+            	<a class="" href="project_voith.html">
+            	<div class="portfolio-box">       
+            	<figure class="portfolio-image"><img src="images/apps/apps_thumbnails/Voith-FRS-Products_thumb.jpg" alt="portfolio image"></figure><!-- close portfolio image -->
+<!--                <div class="portfolio-caption">
+                    <h3 class="portfolio-title">Voith FRS Products<span class="portfolio-category">App</span></h3>
+                </div><!-- close portfolio caption -->               
+<!--                </div>
+                </a>              
+			</div><!-- close portfolio -->
+			
+		</div><!-- close grid-container -->
+	</section><!-- close portfolio section -->
+    
+    <div class="clear"></div>
+    
+     <!-- contact section -->
+     <div class="nav-waypoint">
+     <section id="contact-section" class="contact-section parallax-section parallax-banner-5 parallax-background">
+     <div class="parallax-overlay parallax-overlay-5"></div><!-- parallax overlay -->
+		<div class="grid-container parallax-content">
+        
+            	<!-- parallax header -->
+            	<div class="grid-30 mobile-grid-100 tablet-grid-100 kontakt-header">
+                    <header class="parallax-header">
+                        <h2 class="parallax-title"><span>Melden Sie sich!</span></h2>
+                        <p class="parallax-slogan">Wir bringen Ihr Projekt in die Cloud</p>
+                    </header>
+                </div>
+                <div class="grid-60 prefix-10 mobile-grid-100 tablet-grid-100 kontakt-inhalt">
+                    <div class="contact-message">
+		            	<h3 class="grid-100">Kontaktdaten</h3>
+		            	<ul class="icons-ul">
+		                	<li><i class="icon-li icon-building"></i>2cld GmbH<br>
+                                Thaerstraße 17<br>
+                                10249 Berlin<br>
+                                Handelsregister Berlin Charlottenburg: HRB 199492 B</li>
+                            <li><i class="icon-li icon-user"></i>Geschäftsführung: <a href="https://ricoherlt.com">Rico Herlt</a></li>
+                            <li><i class="icon-li icon-phone"></i>+49 30 / 54 909 688</li>
+		                    <li><i class="icon-li icon-envelope-alt"></i>info@2cld.de</li>
+                            <li><i class="icon-li icon-globe"></i>https://2cld.de</li>
+                            <li><i class="icon-li icon-suitcase"></i>St.Nr: 37/252/51268<br>
+                                Ust.Id: DE319992452</li>
+		                </ul>
+		            </div>
+                </div>
+            	<!-- close parallax header -->
+            
+            <div class="clear"></div>
+            
+		</div><!-- close container -->
+	</section><!-- close contact section -->
+    
+	</div><!-- close nav-waypoint -->
+    
+    <div class="clear"></div>
+    
+	<!-- Footer Section -->
+	<footer class="footer">
+    <a href="#top" class="toTop"><i class="icon-angle-up"></i></a>
+		<div class="grid-container">
+			<div class="grid-100 mobile-grid-100 tablet-grid-100">
+                <h3>We <i class="icon-heart"></i> the <i class="icon-cloud"></i>!</h3>
+         	</div>
+		</div><!-- close container -->
+	</footer><!-- close footer -->
+</div>
+	
+    <!-- Load Javascript
+  	================================================== -->    
+	<script src="js/jquery.mb.YTPlayer.js"></script>
+    <script src="js/jquery.flexslider-min.js"></script>
+    <script src="js/jquery.parallax.min.js"></script>
+    <script src="js/jquery.scrollTo.min.js"></script>
+	<script src="js/waypoints.min.js"></script>
+	<script src="js/jquery.magnific-popup.min.js"></script>
+   	<script src="js/jquery.custom.js"></script>
+    
+<!-- End Document
+================================================== -->
+</body>
+</html>
