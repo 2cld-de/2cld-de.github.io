@@ -68,77 +68,8 @@
   	<script src="js/jquery.min.js"></script>
     
 	<script src="js/modernizr.js"></script>
-    <script src="js/device.min.js"></script>
-
-    <link rel="stylesheet" type="text/css" href="/css/cookieconsent_3.1.0.min.css">
-    <script src="/js/cookieconsent_3.1.0.min.js"></script>
-    <script type="application/javascript">
-        const GOOGLE_UA = "UA-128043679-1"
-
-        function enableCookies() {
-            var s = document.createElement('script')
-            s.async = true
-            s.src = "https://www.googletagmanager.com/gtag/js?id=" + GOOGLE_UA
-            s.id = 'google-analytics-script-tag'
-            document.head.appendChild(s)
-
-            window.dataLayer = window.dataLayer || [];
-            function gtag() { dataLayer.push(arguments); }
-            gtag('js', new Date());
-            gtag('config', GOOGLE_UA, { 'anonymize_ip': true });
-        }
-
-        function deleteAllCookies() {
-            var cookies = document.cookie.split(";");
-
-            for (var i = 0; i < cookies.length; i++) {
-                var cookie = cookies[i];
-                var eqPos = cookie.indexOf("=");
-                var name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
-                document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT";
-            }
-        }
-
-        function disableCookies() {
-            var ga = document.getElementById('google-analytics-script-tag')
-            if (ga) { ga.remove() }
-            window.dataLayer = []
-
-            deleteAllCookies()
-        }
-
-        window.addEventListener("load", function () {
-            window.cookieconsent.initialise({
-                "palette": {
-                    "popup": {
-                        "background": "#1577b5",
-                        "text": "#ffffff"
-                    },
-                    "button": {
-                        "background": "#ffffff",
-                        "text": "#1577b5"
-                    }
-                },
-                "theme": "classic",
-                "type": "opt-in",
-                "content": {
-                    "message": "Diese Website nutzt Cookies um Ihnen eine bestmögliche Nutzererfahrung bereit zu stellen.",
-                    "deny": "Ablehnen",
-                    "allow": "Zustimmen",
-                    "link": "Mehr erfahren"
-                },
-                onInitialise: function (status) {
-                    if (status === 'allow') { enableCookies() }
-                },
-
-                onStatusChange: function (status, chosenBefore) {
-                    if (status === 'allow') { enableCookies() }
-                },
-
-                onRevokeChoice: function () { disableCookies() },
-            })
-        });
-    </script>
+    <script src="js/device.min.js"></script>    
+    
 </head>
 
 <body id="mainsite">
@@ -159,7 +90,6 @@
 						<nav id="ut-navigation" class="grid-80 tablet-grid-80 hide-on-mobile">
                         	<a class="selected" href="#top">Start</a>
 							<a href="#about-section">Leistungen</a>
-                            <a href="#portfolio-section">Projekte</a>
                             <a href="#contact-section">Kontakt</a>
                             <a href="privacy.html">Datenschutz</a>
 						</nav>
@@ -230,6 +160,17 @@
                     <p></p>
                 </div>
             </div>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <div class="grid-70 prefix-15 mobile-grid-100 tablet-grid-100">
+                <header class="section-header">
+                    <p>&nbsp;</p>
+            <p>&nbsp;</p>
+                    <h2 class="section-title"><span>Sprechen Sie uns an</span></h2>
+                    <p class="section-slogan">Kontaktieren Sie uns unverbindlich per E-Mail an <a href="mailto:info@2cld.de">info@2cld.de</a>!</p>
+                </header>
+            </div>
+            	
             
             
             
@@ -244,12 +185,7 @@
 		<div class="grid-container parallax-content">
             
             	<!-- parallax header -->
-            	<div class="grid-70 prefix-15 mobile-grid-100 tablet-grid-100">
-                    <header class="parallax-header">
-                        <h2 class="parallax-title"><span>Sprechen Sie uns an</span></h2>
-                        <p class="parallax-slogan">Kontaktieren Sie uns unverbindlich per E-Mail an <a href="mailto:info@2cld.de">info@2cld.de</a>!</p>
-                    </header>
-                </div>
+            	
             	<!-- close parallax header -->
    
 		</div><!-- close grid container -->
@@ -261,16 +197,18 @@
     
     <!-- portfolio section -->
     <div class="nav-waypoint">
-	<section id="portfolio-section" class="portfolio-section content-section">
+	<!-- 
+<section id="portfolio-section" class="portfolio-section content-section">
 		<div class="grid-container">
         	
-            <!-- section header -->
+            <!~~ section header ~~>
             <div class="grid-70 prefix-15 mobile-grid-100 tablet-grid-100">
                 <header class="section-header">
                     <h2 class="section-title"><span>Projekte</span></h2>
                     <p class="section-slogan">Eine Auswahl unserer <strong>letzten Projekte</strong> finden Sie hier.</p>
                 </header>
             </div>
+ -->
             <!-- close section header -->
             
 <!--            <div class="clear"></div>
@@ -371,8 +309,10 @@
                 </a>              
 			</div><!-- close portfolio -->
 			
-		</div><!-- close grid-container -->
-	</section><!-- close portfolio section -->
+		<!-- 
+</div><!~~ close grid-container ~~>
+	</section><!~~ close portfolio section ~~>
+ -->
     
     <div class="clear"></div>
     
